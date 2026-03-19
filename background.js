@@ -49,6 +49,11 @@ function openRecord() {
   chrome.tabs.create({ url: 'record.html' });
 }
 
+// 打开取色器
+function openColorpicker() {
+  chrome.tabs.create({ url: 'colorpicker.html' });
+}
+
 // 安装时显示欢迎
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === 'install') {
