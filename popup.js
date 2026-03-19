@@ -15,6 +15,10 @@ document.getElementById('taskBtn').addEventListener('click', () => {
   chrome.runtime.sendMessage({ action: 'openTask' });
 });
 
+document.getElementById('recordBtn').addEventListener('click', () => {
+  chrome.runtime.sendMessage({ action: 'openRecord' });
+});
+
 // 快捷键监听
 chrome.commands.onCommand.addListener((command) => {
   if (command === 'screenshot') {

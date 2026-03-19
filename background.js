@@ -44,6 +44,11 @@ function openTask() {
   chrome.tabs.create({ url: 'task.html' });
 }
 
+// 打开录屏
+function openRecord() {
+  chrome.tabs.create({ url: 'record.html' });
+}
+
 // 安装时显示欢迎
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === 'install') {
