@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efficiency Toolkit</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .header p {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+    .tools {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tool-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .tool-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .tool-btn .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .tool-btn .info {
+      flex: 1;
+      text-align: left;
+    }
+    .tool-btn .info h3 {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 2px;
+    }
+    .tool-btn .info p {
+      font-size: 11px;
+      color: #999;
+    }
+    .screenshot .icon { background: #ffeaa7; }
+    .note .icon { background: #dfe6e9; }
+    .converter .icon { background: #b2bec3; }
+    .footer {
+      padding: 12px;
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>⚡ Efficiency Toolkit</h1>
+    <p>效率工具集合</p>
+  </div>
+  
+  <div class="tools">
+    <button class="tool-btn screenshot" id="screenshotBtn">
+      <div class="icon">📸</div>
+      <div class="info">
+        <h3>截图工具</h3>
+        <p>截取当前页面 / 选区截图</p>
+      </div>
+    </button>
+    
+    <button class="tool-btn note" id="noteBtn">
+      <div class="icon">📝</div>
+      <div class="info">
+        <h3>笔记</h3>
+        <p>快速记录 / 剪藏内容</p>
+      </div>
+    </button>
+    
+    <button class="tool-btn converter" id="converterBtn">
+      <div class="icon">🔄</div>
+      <div class="info">
+        <h3>格式转换</h3>
+        <p>JSON / Base64 / 时间戳等</p>
+      </div>
+    </button>
+  </div>
+  
+  <div class="footer">
+    v1.0.0 | 按 Ctrl+Shift+S 截图
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
