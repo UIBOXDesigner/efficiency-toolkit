@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Efficiency Toolkit",
-  "version": "1.0.0",
-  "description": "效率工具集合 - 截图、笔记、格式转换等功能",
+  "version": "1.1.0",
+  "description": "效率工具集合 - 截图、笔记、格式转换、任务管理等功能",
   "permissions": [
     "activeTab",
     "storage",

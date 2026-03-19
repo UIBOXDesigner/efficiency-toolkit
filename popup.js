@@ -11,6 +11,10 @@ document.getElementById('converterBtn').addEventListener('click', () => {
   chrome.runtime.sendMessage({ action: 'openConverter' });
 });
 
+document.getElementById('taskBtn').addEventListener('click', () => {
+  chrome.runtime.sendMessage({ action: 'openTask' });
+});
+
 // 快捷键监听
 chrome.commands.onCommand.addListener((command) => {
   if (command === 'screenshot') {

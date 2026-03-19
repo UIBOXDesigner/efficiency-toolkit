@@ -39,6 +39,11 @@ function openConverter() {
   chrome.tabs.create({ url: 'converter.html' });
 }
 
+// 打开任务管理
+function openTask() {
+  chrome.tabs.create({ url: 'task.html' });
+}
+
 // 安装时显示欢迎
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === 'install') {
